@@ -1,0 +1,532 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1 0 auto;
+    padding-bottom: 40px;
+}
+
+.navbar {
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.75rem 1rem; /* Slightly increased padding */
+    min-height: 80px; /* Ensure navbar is tall enough */
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.nav-item {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.navbar-brand img {
+    height: 60px; /* Increased from 40px */
+    width: auto;
+    margin-right: 10px; /* Added some spacing after the logo */
+    transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+
+.navbar-brand {
+    padding: 0;
+    font-weight: bold;
+    color: #0046cc !important;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .navbar-brand span {
+        color: #333;
+    }
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+    .nav-link:hover {
+        color: #0046cc !important;
+    }
+
+    .nav-link.active {
+        background-color: #0046cc !important;
+        color: white !important;
+        border-radius: 4px;
+    }
+
+.get-in-touch {
+    background-color: #0046cc;
+    color: white !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+    .get-in-touch:hover {
+        background-color: #003399;
+    }
+
+/* Enhanced Dropdown Styling */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    margin-top: 10px;
+    min-width: 220px;
+    animation: dropdown-fade 0.2s ease-in-out;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+        padding-left: 24px;
+        color: #0047AB;
+    }
+
+/* Optional: Add a subtle arrow indicator */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    transform: rotate(45deg);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Animation for smooth appearance */
+@keyframes dropdown-fade {
+    from
+
+{
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+/* Active state styling */
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #0047AB;
+    color: white;
+}
+
+/* Hover effect for main dropdown toggle */
+.nav-link.dropdown-toggle:hover {
+    color: #0047AB !important;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+footer {
+    background-color: #0F1744;
+    color: white;
+    padding: 40px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: opacity 0.3s;
+        }
+
+            .footer-section ul li a:hover {
+                opacity: 0.8;
+            }
+
+.footer-contact {
+    color: white;
+    font-size: 14px;
+}
+
+    .footer-contact p {
+        margin-bottom: 10px;
+    }
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+    .newsletter-form input {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        flex-grow: 1;
+    }
+
+    .newsletter-form button {
+        padding: 8px 20px;
+        background-color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+    .social-links a {
+        color: white;
+        font-size: 20px;
+        transition: opacity 0.3s;
+    }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+
+.follow-section h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Hero section styles */
+.resources-hero {
+    position: relative;
+    width: 100vw;
+    min-height: 500px;
+    background-color: #0B2F3F;
+    overflow: hidden;
+    margin: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.resources-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #12143F 40%, transparent);
+}
+
+.resources-image {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 50%;
+    opacity: 0.7;
+}
+
+.resources-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+
+.resources-card {
+    max-width: 600px;
+    border-radius: 8px;
+    padding: 48px;
+}
+
+.resources-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.resources-description {
+    font-size: 18px;
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+/* Blog section styles */
+.blog-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+/* Filter styles */
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.filter-item {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+    .filter-btn:hover {
+        color: #0039a6;
+    }
+
+    .filter-btn.active {
+        color: #0039a6;
+        border-bottom: 2px solid #0039a6;
+    }
+
+/* Blog grid and card styles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+    .blog-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .blog-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.blog-card-content {
+    padding: 20px;
+}
+
+.blog-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.blog-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.blog-tag {
+    font-size: 14px;
+    color: #666;
+}
+
+    .blog-tag:not(:last-child):after {
+        content: ",";
+        margin-right: 5px;
+    }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .resources-card
+
+{
+    padding: 32px;
+    margin: 0 auto;
+}
+
+.resources-title {
+    font-size: 36px;
+}
+
+.resources-description {
+    font-size: 16px;
+}
+
+.filter-list {
+    gap: 10px;
+}
+
+.filter-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.blog-grid {
+    grid-template-columns: 1fr;
+}
+
+}
+ 
+ 
+/* Filter List Styles */
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.filter-item {
+    margin: 0;
+    padding: 0;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+    .filter-btn:hover {
+        color: #0039a6;
+    }
+
+    .filter-btn.active {
+        color: #0039a6;
+        border-bottom: 2px solid #0039a6;
+    }
+
+@media (max-width: 768px) {
+    .filter-list
+
+{
+    gap: 10px;
+}
+
+.filter-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+}

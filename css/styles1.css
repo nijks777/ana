@@ -1,0 +1,630 @@
+         html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            flex: 1 0 auto;
+            padding-bottom: 40px;
+        }
+
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 0.75rem 1rem; /* Slightly increased padding */
+            min-height: 80px; /* Ensure navbar is tall enough */
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+            margin-right: 2rem;
+        }
+
+        .nav-item {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .navbar-brand img {
+            height: 60px; /* Increased from 40px */
+            width: auto;
+            margin-right: 10px; /* Added some spacing after the logo */
+            transition: all 0.3s ease; /* Smooth transition for any changes */
+        }
+
+
+        .navbar-brand {
+            padding: 0;
+            font-weight: bold;
+            color: #0046cc !important;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+            .navbar-brand span {
+                color: #333;
+            }
+
+        .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover {
+                color: #0046cc !important;
+            }
+
+            .nav-link.active {
+                background-color: #0046cc !important;
+                color: white !important;
+                border-radius: 4px;
+            }
+
+        .get-in-touch {
+            background-color: #0046cc;
+            color: white !important;
+            padding: 0.5rem 1.5rem !important;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+
+            .get-in-touch:hover {
+                background-color: #003399;
+            }
+
+        /* Enhanced Dropdown Styling */
+        .nav-item.dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 8px 0;
+            margin-top: 10px;
+            min-width: 220px;
+            animation: dropdown-fade 0.2s ease-in-out;
+        }
+
+        .dropdown-item {
+            padding: 10px 20px;
+            color: #333;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+            .dropdown-item:hover {
+                background-color: #f8f9fa;
+                padding-left: 24px;
+                color: #0047AB;
+            }
+
+        /* Optional: Add a subtle arrow indicator */
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 20px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            transform: rotate(45deg);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-left: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Animation for smooth appearance */
+        @keyframes dropdown-fade {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+
+        /* Active state styling */
+        .dropdown-item.active,
+        .dropdown-item:active {
+            background-color: #0047AB;
+            color: white;
+        }
+
+        /* Hover effect for main dropdown toggle */
+        .nav-link.dropdown-toggle:hover {
+            color: #0047AB !important;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        footer {
+            background-color: #0F1744;
+            color: white;
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .footer-section h3 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            .footer-section ul li {
+                margin-bottom: 10px;
+            }
+
+                .footer-section ul li a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 14px;
+                    transition: opacity 0.3s;
+                }
+
+                    .footer-section ul li a:hover {
+                        opacity: 0.8;
+                    }
+
+        .footer-contact {
+            color: white;
+            font-size: 14px;
+        }
+
+            .footer-contact p {
+                margin-bottom: 10px;
+            }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+            .newsletter-form input {
+                padding: 8px 12px;
+                border: none;
+                border-radius: 4px;
+                flex-grow: 1;
+            }
+
+            .newsletter-form button {
+                padding: 8px 20px;
+                background-color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+            .social-links a {
+                color: white;
+                font-size: 20px;
+                transition: opacity 0.3s;
+            }
+
+                .social-links a:hover {
+                    opacity: 0.8;
+                }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+
+        .follow-section h4 {
+            color: white;
+            margin-bottom: 15px;
+        } 
+    .about-us-hero {
+        position: relative; /* Changed from absolute to relative */
+        width: 100vw; /* Full viewport width */
+        margin-left: -50vw; /* Negative margin technique */
+        left: 50%; /* Center the element */
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+        min-height: 500px;
+        overflow: hidden; /* Prevent horizontal scrollbar */
+    }
+
+        .about-us-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(15, 25, 65, 0.95) 50%, rgba(15, 25, 65, 0.8) 100%);
+            z-index: 0; /* Changed from -1 to 0 */
+        }
+
+        .about-us-hero .container {
+            position: relative;
+            z-index: 1; /* Ensure content appears above gradient */
+        }
+
+        .about-us-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-us-hero p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+    /* Add responsive adjustments */
+    @media screen and (max-width: 768px) {
+        .about-us-hero h1
+
+    {
+        font-size: 2.5rem;
+    }
+
+    .about-us-hero p {
+        font-size: 1.1rem;
+    }
+
+    }
+
+    .about-content-section {
+        padding: 4rem 0;
+    }
+
+    .about-image-container {
+        position: relative;
+        margin-bottom: 2rem;
+        height: 500px; /* Fixed height for better control */
+        display: flex;
+        align-items: center;
+    }
+
+    .about-image-person {
+        position: absolute;
+        left: 0;
+        width: 75%; /* Increased width for better visibility */
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .about-image-overlay {
+        position: absolute;
+        right: 0;
+        bottom: 10%;
+        width: 45%; /* Adjusted width */
+        max-width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        z-index: 2;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        padding: 20px;
+    }
+
+    .services-accordion {
+        margin-top: 2rem;
+    }
+
+    .service-item {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+        .service-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+    .service-header {
+        padding: 1rem 1.5rem;
+        background: #fff;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #0d6efd;
+        font-weight: 500;
+    }
+
+        .service-header:hover {
+            background: #f8f9fa;
+        }
+
+    .service-content {
+        padding: 1rem 1.5rem;
+        display: none;
+    }
+
+        .service-content.active {
+            display: block;
+        }
+
+    .chevron-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .active .chevron-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+        .about-image-container
+
+    {
+        height: 400px;
+    }
+
+    .about-image-person {
+        width: 70%;
+    }
+
+    .about-image-overlay {
+        width: 50%;
+        right: 5%;
+    }
+
+    }
+
+    @media (max-width: 768px) {
+        .about-image-container
+
+    {
+        height: 350px;
+    }
+
+    .about-image-person {
+        width: 100%;
+    }
+
+    .about-image-overlay {
+        width: 60%;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -50px;
+    }
+
+    }
+
+    .mission-vision-section {
+        padding: 4rem 0;
+        background: #f8f9fa;
+    }
+
+    .circle-image-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .circle-image {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .mission-vision-card {
+        background: linear-gradient(135deg, #0a2151 0%, #1a3a7d 100%);
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 1rem 0;
+        color: white;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        position: relative;
+        overflow: hidden;
+    }
+
+        .mission-vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path d="M0 0 L200 100 L200 0 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+            opacity: 0.1;
+        }
+
+        .mission-vision-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .mission-vision-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+            position: relative;
+        }
+
+    .floating-dots {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+        .circle-image-container
+
+    {
+        margin-bottom: 2rem;
+    }
+
+    .mission-vision-card {
+        margin: 1rem 0;
+    }
+
+    }
+
+    .what-sets-apart {
+        padding: 5rem 0;
+        background-color: #E6E9FF;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        overflow: hidden;
+    }
+
+        .what-sets-apart .container {
+            max-width: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+    @media (min-width: 1400px) {
+        .what-sets-apart .container
+
+    {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    }
+
+    /* Optional: If you want to ensure cards maintain proper spacing */
+    .what-sets-apart .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 3rem;
+        color: #333;
+    }
+
+    .feature-card {
+        background: white;
+        border-radius: 15px;
+        padding: 1.5rem;
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+    .feature-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .feature-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        .section-title
+
+    {
+        font-size: 2rem;
+    }
+
+    .feature-card {
+        margin-bottom: 2rem;
+    }
+
+    }
+    .image-content {
+        flex: 1;
+        max-width: 50%;
+    }
+
+        .image-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+  
