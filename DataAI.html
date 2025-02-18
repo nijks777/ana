@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/styles22.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="./images/logo.png" alt="Company Logo" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html"  class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">	
+                            <a href="about.html" class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Privacy" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Services" ? "active" : "")"
+                               id="servicesDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Services">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a href="BusinessAutomation.html" class="dropdown-item" >Business Automation</a></li>
+                                <li><a href="DataAI.html" class="dropdown-item" asp-area="" asp-controller="Home" asp-action="DataAI">Data & AI</a></li>
+                                <li><a href="CloudImplementation.html" class="dropdown-item" asp-area="" asp-controller="Home" asp-action="CloudImplementation">Cloud Implementation</a></li>
+                                <li><a href="DataAnalytics.html" class="dropdown-item" asp-area="" asp-controller="Home" asp-action="DataAnalytics">DataAnalytics</a></li>
+                                <li><a href="MaintenanceSupport.html" class="dropdown-item" asp-area="" asp-controller="Home" asp-action="MaintenanceSupport">Maintenance & Support</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Resources.html" class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Resources" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Resources">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Career.html" class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Career" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Career">Career</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="Contact.html" class="get-in-touch" asp-area="" asp-controller="Home" asp-action="Contact">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="container">
+            <main role="main" class="pb-3">
+                <div class="about-us-hero">
+                    <div class="container py-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h1 class="text-white display-4 fw-bold mb-4">Welcome to AnalyticsDemo</h1>
+                                <p class="text-white mb-4">At Analyticsdemo, we specialize in transforming businesses with advanced Data & AI solutions, enabling smarter decision-making and unlocking new opportunities.</p>
+                                <a asp-controller="Home" asp-action="Contact" class="connect-btn">Get in Touch</a>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="./images/2150038859.jpg" alt="Team" class="img-fluid rounded shadow-lg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <section class="services-section">
+                    <div class="container">
+                        <h2>Our Data & AI Solutions</h2>
+                        <p class="description">Harness the power of artificial intelligence and data-driven insights to drive innovation and efficiency.</p>
+                
+                        <div class="slider-container">
+                            <button class="slider-arrow prev" id="prevBtn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="slider-arrow next" id="nextBtn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                
+                            <div class="services-slider">
+                                <div class="service-slide">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <h3 class="service-title">AI-Powered Analytics</h3>
+                                        <p class="service-description">Leverage artificial intelligence to uncover deep insights and optimize business strategies.</p>
+                                    </div>
+                                </div>
+                
+                                <div class="service-slide">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <h3 class="service-title">Predictive Analytics</h3>
+                                        <p class="service-description">Utilize machine learning models to forecast trends and make data-driven decisions.</p>
+                                    </div>
+                                </div>
+                
+                                <div class="service-slide">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <i class="fas fa-database"></i>
+                                        </div>
+                                        <h3 class="service-title">Big Data Solutions</h3>
+                                        <p class="service-description">Manage and analyze large datasets efficiently to drive actionable insights.</p>
+                                    </div>
+                                </div>
+                
+                                <div class="service-slide">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <i class="fas fa-robot"></i>
+                                        </div>
+                                        <h3 class="service-title">AI-Driven Automation</h3>
+                                        <p class="service-description">Enhance operations with intelligent automation powered by artificial intelligence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="isemo-section">
+                    <div class="isemo-container">
+                        <h2 class="isemo-title">I.S.E.M.O. Framework</h2>
+                        <p class="isemo-description">
+                            At Servoedge, we follow a structured, end-to-end approach that transforms raw data into tailored analytics solutions. From data collection to actionable insights, every step is aligned to meet specific needs, creating a clear and purposeful data-driven narrative.
+                        </p>
+                
+                        <div class="isemo-cards">
+                            <!-- Insight Card -->
+                            <div class="isemo-card">
+                                <div class="card-header">
+                                    <div class="card-letter">I</div>
+                                    <h3 class="card-title">INSIGHT & OPPORTUNITIES</h3>
+                                </div>
+                                <ul class="card-list">
+                                    <li>Collect & Analyze Data</li>
+                                    <li>Do Data Mining</li>
+                                    <li>Dashboards</li>
+                                    <li>Predictive Analytics</li>
+                                    <li>Identify Opportunities from data insights</li>
+                                </ul>
+                            </div>
+                
+                            <!-- Strategy Card -->
+                            <div class="isemo-card">
+                                <div class="card-header">
+                                    <div class="card-letter">S</div>
+                                    <h3 class="card-title">BUILD STRATEGY</h3>
+                                </div>
+                                <ul class="card-list">
+                                    <li>Identified opportunities & gaps from step 1</li>
+                                    <li>Define strategy to mature opportunities and fill gaps</li>
+                                    <li>Build plan of execution</li>
+                                    <li>Define process to control</li>
+                                </ul>
+                            </div>
+                
+                            <!-- Execution Card -->
+                            <div class="isemo-card">
+                                <div class="card-header">
+                                    <div class="card-letter">E</div>
+                                    <h3 class="card-title">EXECUTION</h3>
+                                </div>
+                                <ul class="card-list">
+                                    <li>Execute plan of action</li>
+                                    <li>Define goal out of each activity</li>
+                                    <li>Control each activity</li>
+                                </ul>
+                            </div>
+                
+                            <!-- Measure Card -->
+                            <div class="isemo-card">
+                                <div class="card-header">
+                                    <div class="card-letter">M</div>
+                                    <h3 class="card-title">MEASURE OUTCOME</h3>
+                                </div>
+                                <ul class="card-list">
+                                    <li>Performance assessment of each activity executed</li>
+                                    <li>Identify the gaps in planned and actuals</li>
+                                    <li>Continue to measure</li>
+                                </ul>
+                            </div>
+                
+                            <!-- Optimize Card -->
+                            <div class="isemo-card">
+                                <div class="card-header">
+                                    <div class="card-letter">O</div>
+                                    <h3 class="card-title">OPTIMIZE</h3>
+                                </div>
+                                <ul class="card-list">
+                                    <li>The identified gaps shall be recurringly optimized for best performance desired</li>
+                                    <li>Achieve improved ROI</li>
+                                    <li>Grow Business</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                
+                        </div>
+                    
+                </section>
+                
+                <section class="values-section">
+                    <div class="values-container">
+                        <h2>Our Commitment</h2>
+                        <p class="description">We deliver scalable, AI-powered solutions that drive efficiency, innovation, and business transformation.</p>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card">
+                                    <div class="value-icon-wrapper">
+                                        <img src="./images/9932780_4277423.jpg" alt="Data-Driven Insights" class="value-icon-img">
+                                    </div>
+                                    <h3 class="value-title">Data-Driven Insights</h3>
+                                    <p class="value-description">Make informed decisions backed by advanced data analytics and AI models.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card">
+                                    <div class="value-icon-wrapper">
+                                        <img src="./images/5639784_2948496.jpg" alt="AI-Powered Security" class="value-icon-img">
+                                    </div>
+                                    <h3 class="value-title">AI-Powered Security</h3>
+                                    <p class="value-description">Implement AI-driven security solutions to protect critical business data and systems.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card">
+                                    <div class="value-icon-wrapper">
+                                        <img src="~/images/1411.jpg" alt="Operational Efficiency" class="value-icon-img">
+                                    </div>
+                                    <h3 class="value-title">Operational Efficiency</h3>
+                                    <p class="value-description">Optimize workflows and resource allocation with AI-driven automation.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4">
+                                <div class="value-card">
+                                    <div class="value-icon-wrapper">
+                                        <img src="./images/21147.jpg" alt="Innovation & Growth" class="value-icon-img">
+                                    </div>
+                                    <h3 class="value-title">Innovation & Growth</h3>
+                                    <p class="value-description">Leverage AI to foster innovation and scale business operations efficiently.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="cta-section">
+                    <div class="container">
+                        <div class="cta-container">
+                            <div class="cta-image">
+                                <img src="./images/8766.jpg" alt="Data & AI Solutions">
+                            </div>
+                            <div class="cta-content">
+                                <h2 class="cta-title">Ready to Transform Your Business with AI?</h2>
+                                <p class="cta-description">Connect with us today to explore AI-powered solutions that enhance efficiency and drive innovation.</p>
+                                <a asp-controller="Home" asp-action="Contact" class="cta-button">Start Your AI Journey!</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+            </main>
+        </div>
+        </div>
+        
+        
+        
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="./images/logo.png" alt="Company Logo" />
+                        </div>
+    
+                        <h3>CONTACT US</h3>
+                        <div class="footer-contact">
+                            <p>📞 +91-999999999</p>
+                            <p>✉️ sales@AnalyticsDemo</p>
+                            <p>📍  Noida</p>
+                        </div>
+                    </div>
+    
+                    <div class="footer-section">
+                        <h3>QUICK LINKS</h3>
+                        <ul>
+                            <li><a href="about.html" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a></li>
+                            <li><a href="about.html"asp-area="" asp-controller="Home" asp-action="Contact">Work At AnalyticsDemo</a></li>
+                            <li><a href="about.html" asp-area="" asp-controller="Home" asp-action="Career">Current Openings</a></li>
+                            <li><a href="about.html" asp-area="" asp-controller="Home" asp-action="Resources">Blogs</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-section">
+                        <h3>SERVICES</h3>
+                        <ul>
+                            <li><a href="BusinessAutomation.html" asp-area="" asp-controller="Home" asp-action="BusinessAutomation">Business Automation</a></li>
+                            <li><a href="DataAI.html" asp-area="" asp-controller="Home" asp-action="DataAI">Data & AI</a></li>
+                            <li><a href="CloudImplementation.html" asp-area="" asp-controller="Home" asp-action="CloudImplementation">Cloud Implementation</a></li>
+                            <li><a href="DataAnalytics.html" asp-area="" asp-controller="Home" asp-action="DataAnalytics">DataAnalytics</a></li>
+                            <li><a href="MaintenanceSupport.html" asp-area="" asp-controller="Home" asp-action="MaintenanceSupport">Maintenance & Support</a></li>
+                        </ul>
+                    </div>
+    
+    
+                    <div class="footer-section">
+                        <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                        <div class="footer-contact">
+                            <p>To subscribe to our newsletter, please email us:</p>
+                            <p><a href="mailto:sales@analytics.com" style="color: white; text-decoration: underline;">sales@analytics.com</a></p>
+                        </div>
+                        <div class="follow-section">
+                            <h4>FOLLOW</h4>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    © 2025 AnalyticsDEMO
+                </div>
+            </div>
+        </footer>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+            <script src="./js/script.js"></script>
+        </body>
+        </html>

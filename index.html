@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="./images/logo.png" alt="Company Logo" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html"  class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">	
+                            <a href="about.html" class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Privacy" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Services" ? "active" : "")"
+                               id="servicesDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Services">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a href="BusinessAutomation.html" class="dropdown-item" >Business Automation</a></li>
+                                <li><a href="DataAI.html" class="dropdown-item" asp-area="" asp-controller="Home" asp-action="DataAI">Data & AI</a></li>
+                                <li><a href="CloudImplementation.html" class="dropdown-item" asp-area="" asp-controller="Home" asp-action="CloudImplementation">Cloud Implementation</a></li>
+                                <li><a href="DataAnalytics.html" class="dropdown-item" asp-area="" asp-controller="Home" asp-action="DataAnalytics">DataAnalytics</a></li>
+                                <li><a href="MaintenanceSupport.html" class="dropdown-item" asp-area="" asp-controller="Home" asp-action="MaintenanceSupport">Maintenance & Support</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Resources.html" class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Resources" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Resources">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Career.html" class="nav-link text-dark @(ViewContext.RouteData.Values["action"]?.ToString() == "Career" ? "active" : "")"
+                               asp-area="" asp-controller="Home" asp-action="Career">Career</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="Contact.html" class="get-in-touch" asp-area="" asp-controller="Home" asp-action="Contact">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="container">
+            <main role="main" class="pb-3">
+<div class="carousel-container">
+    <div class="carousel-wrapper">
+        <!-- First Slide -->
+        <div class="carousel-slide active">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h1>Seamless Performance with Business Automation</h1>
+                    <p>From App Maintenance to ERP Integration, our custom solutions automate workflows and ensure uninterrupted performance for your business.</p>
+                    <a href="Contact.html" class="connect-button">Connect with Us</a>
+                </div>
+                <div class="image-content">
+                    <img src="./images/2151099226.jpg" alt="Business Meeting" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-slide">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h1>Digital Transformation Solutions</h1>
+                    <p>Leverage our expertise to transform your business with cutting-edge digital solutions and technologies.</p>
+                    <a href="Contact.html" class="connect-button">Connect with Us</a>
+                </div>
+                <div class="image-content">
+                    <img src="./images/127750.jpg" alt="Digital Technology" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Slide -->
+        <div class="carousel-slide">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h1>Enterprise Solutions</h1>
+                    <p>Custom enterprise solutions designed to scale your business and improve operational efficiency.</p>
+                    <a href="Contact.html" class="connect-button">Connect with Us</a>
+                </div>
+                <div class="image-content">
+                    <img src="./images/4334361_2279868.jpg" alt="Enterprise Solutions" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots Navigation -->
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+</div>
+<div class="define-section">
+    <div class="define-image">
+        <img src="./images/3986.jpg" alt="IT Consultant working">
+        <span class="star-decoration star-1">✦</span>
+        <span class="star-decoration star-2">✦</span>
+        <span class="star-decoration star-3">✦</span>
+    </div>
+    <div class="define-content">
+        <h2>How We Define Ourselves</h2>
+        <p>At Analytics Technologies, we are dedicated to propelling your business forward with cutting-edge IT consulting services. As a premier IT consulting firm, we collaborate with organizations to optimize operations and boost overall performance in today's dynamic digital environment. Whether you need expert guidance, customized IT solutions, or talented professionals to strengthen your team, we're here to support you at every stage.</p>
+        <p>Don't let your business fall behind. Contact us today!</p>
+        <a href="@Url.Action("Privacy", "Home")" class="know-more-btn">Know More →</a>
+    </div>
+</div>
+<div class="what-we-offer">
+    <div class="offer-container">
+        <div class="section-title">
+            <h2>What We Offer</h2>
+            <h3>We Can Help In...</h3>
+        </div>
+
+        <div class="services-container">
+            <div class="services-tabs">
+                <div class="service-tab active">
+                    <i class="fas fa-cogs"></i>
+                    <span>Business Automation</span>
+                </div>
+                <div class="service-tab">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Data & AI</span>
+                </div>
+                <div class="service-tab">
+                    <i class="fas fa-cloud"></i>
+                    <span>Cloud Implementation</span>
+                </div>
+                <div class="service-tab">
+                    <i class="fas fa-link"></i>
+                    <span>DataAnalytics</span>
+                </div>
+                <div class="service-tab">
+                    <i class="fas fa-tools"></i>
+                    <span>Maintenance & Support</span>
+                </div>
+            </div>
+
+            <!-- Business Automation Content -->
+            <div class="service-content active">
+                <div class="content-text">
+                    <h4>Business Automation</h4>
+                    <p>Automate repetitive tasks and create custom solutions tailored to your unique business needs. Our automation expertise helps you boost productivity, reduce errors, and focus on what matters most—growing your business.</p>
+                    <a asp-controller="Home" asp-action="DataAI" class="know-more-link">Know More →</a>
+                        Know More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="content-image">
+                    <img src="./images/2150377138.jpg" alt="Business Automation">
+                </div>
+            </div>
+
+            <!-- Data & AI Content -->
+            <div class="service-content">
+                <div class="content-text">
+                    <h4>Data & AI</h4>
+                    <p>Harness the power of data analytics and artificial intelligence to gain valuable insights and make data-driven decisions. Our AI solutions help you unlock new opportunities, optimize operations, and stay ahead of the competition.</p>
+                    <a asp-controller="Home" asp-action="DataAI" class="know-more-link">Know More →</a>
+                        Know More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="content-image">
+                    <img src="./images/22379.jpg" alt="Data & AI">
+                </div>
+            </div>
+
+            <!-- Cloud Implementation Content -->
+            <div class="service-content">
+                <div class="content-text">
+                    <h4>Cloud Implementation</h4>
+                    <p>Transform your business with secure and scalable cloud solutions. Our cloud implementation services help you migrate, optimize, and manage your infrastructure while ensuring maximum efficiency and minimal downtime.</p>
+                    <a asp-controller="Home" asp-action="CloudImplementation" class="know-more-link">Know More →</a>
+                        Know More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="content-image">
+                    <img src="./images/12071198_SL-101820-36860-11.jpg" alt="Cloud Implementation">
+                </div>
+            </div>
+
+            <!-- Integration Content -->
+            <div class="service-content">
+                <div class="content-text">
+                    <h4>DataAnalytics</h4>
+                    <p>Seamlessly connect your systems and applications to create Business Insights. Our BI services ensure smooth data flow and process coordination across your entire organization.</p>
+                    <a asp-controller="Home" asp-action="DataAnalytics" class="know-more-link">Know More →</a>
+                        Know More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="content-image">
+                    <img src="./images/32908513_290601182837.jpg" alt="Integration">
+                </div>
+            </div>
+
+            <!-- Maintenance & Support Content -->
+            <div class="service-content">
+                <div class="content-text">
+                    <h4>Maintenance & Support</h4>
+                    <p>Keep your systems running smoothly with our comprehensive maintenance and support services. We provide proactive monitoring, timely updates, and dedicated support to ensure your business operations remain uninterrupted.</p>
+                    <a asp-controller="Home" asp-action="MaintenanceSupport" class="know-more-link">Know More →</a>
+
+                        Know More
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="content-image">
+                    <img src="./images/14331.jpg" alt="Maintenance & Support">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="strategic-section">
+    <div class="strategic-header">
+        <h2>Your Strategic IT Partner, Transforming Challenges into Opportunities</h2>
+        <p>AnalyticsDemo stands out as your premier strategic partner in navigating the intricate digital landscape. Our commitment goes beyond conventional services; we are dedicated to transforming challenges into opportunities with a unique fusion of cutting-edge technology and personalized solutions.</p>
+    </div>
+
+    <div class="strategic-cards">
+        <!-- Expertise Card -->
+        <div class="strategic-card">
+            <img src="./images/13506.jpg" alt="Expertise that Matters" class="card-image">
+            <div class="card-overlay">
+                <div class="card-content">
+                    <h3 class="card-title">Expertise that Matters</h3>
+                    <p class="card-text">Leverage our deep industry expertise to drive your business forward with innovative solutions.</p>
+                    <a href="about.html" class="know-more-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personalized Solutions Card -->
+        <div class="strategic-card">
+            <img src="./images/495.jpg" alt="Personalized Solutions" class="card-image">
+            <div class="card-overlay">
+                <div class="card-content">
+                    <h3 class="card-title">Personalized Solutions</h3>
+                    <p class="card-text">No two businesses are alike. That's why our approach is never one-size-fits-all.</p>
+                    <a href="about.html" class="know-more-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Proactive Support Card -->
+        <div class="strategic-card">
+            <img src="./images/6679.jpg" alt="Proactive Support" class="card-image">
+            <div class="card-overlay">
+                <div class="card-content">
+                    <h3 class="card-title">Proactive Support</h3>
+                    <p class="card-text">Get ahead of challenges with our proactive support and maintenance services.</p>
+                    <a href="about.html" class="know-more-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collaborative Approach Card -->
+        <div class="strategic-card">
+            <img src="./images/13765.jpg" alt="Collaborative Approach" class="card-image">
+            <div class="card-overlay">
+                <div class="card-content">
+                    <h3 class="card-title">Collaborative Approach</h3>
+                    <p class="card-text">Work together with our expert team to achieve your business goals.</p>
+                    <a href="about.html" class="know-more-btn">Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clients-section">
+    <div class="section-container">
+    <div class="clients-header">
+        <h3>Our Clients</h3>
+        <h2>Proudly Serving Our<br>Valued Clients</h2>
+    </div>
+
+    <div class="carousel-track">
+        <div class="logo-carousel">
+            <!-- First Row -->
+            <div class="logo-slide">
+                <div class="logo-container">
+                    <img src="./images/ap.png" alt="Synergos">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/mi.png" alt="Innova">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/amazon.jpg" alt="Spark Minda">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/g2.jpg" alt="NetEdge">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/amazon.jpg" alt="Hero">
+                </div>
+                <!-- Duplicate for seamless scrolling -->
+                <div class="logo-container">
+                    <img src="./images/mi.png" alt="Synergos">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/am.png" alt="Innova">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/g2.jpg" alt="Spark Minda">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/amazon.jpg" alt="NetEdge">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/ap.png" alt="Hero">
+                </div>
+            </div>
+
+            <!-- Second Row (moves in opposite direction) -->
+            <div class="logo-slide">
+                <div class="logo-container">
+                    <img src="./images/tl.jpg" alt="Geo Group">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/g2.jpg" alt="E3Live">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/mi.png" alt="NMS">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/am.png" alt="Incedo">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/ap.png" alt="Sopra Steria">
+                </div>
+                <!-- Duplicate for seamless scrolling -->
+                <div class="logo-container">
+                    <img src="./images/mi.png" alt="Geo Group">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/amazon.jpg" alt="E3Live">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/g2.jpg" alt="NMS">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/am.png" alt="Incedo">
+                </div>
+                <div class="logo-container">
+                    <img src="./images/tl.jpg" alt="Sopra Steria">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div></div>
+<div class="blog-container">
+    <h2 class="blog-title">Our Latest Blogs</h2>
+    <div class="blog-grid">
+        <!-- Blog Card 1 -->
+        <a href="ERPSustainablePractices.html">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="./images/2149092252.jpg" alt="ERP Solutions">
+                </div>
+                <div class="blog-content">
+                    <h3>How ERP Solutions Contribute to Sustainable</h3>
+                    <div class="blog-categories">Learning & Development</div>
+                    <div class="blog-date">November 12, 2024</div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Blog Card 2 -->
+        <a href="CloudDatabaseInnovation.html">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="./images/890.jpg" alt="Cloud Database">
+                </div>
+                <div class="blog-content">
+                    <h3>Innovating Cloud Database Management Systems: A</h3>
+                    <div class="blog-categories">Data Strategy, Oracle ERP, Software Engineering</div>
+                    <div class="blog-date">May 8, 2024</div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Blog Card 3 -->
+        <a href="DatabaseComparison.html">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="./images/7118840_3405302.jpg" alt="Database Comparison">
+                </div>
+                <div class="blog-content">
+                    <h3>Choosing Between Relational and NoSQL</h3>
+                    <div class="blog-categories">.Net, Data Engineering, Data Strategy, Software Engineering</div>
+                    <div class="blog-date">April 24, 2024</div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Blog Card 4 -->
+        <a href="CloudDatabaseInnovation.html">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="./images/21948351_4300_7_03.jpg" alt="Continuous Learning">
+                </div>
+                <div class="blog-content">
+                    <h3>The Power of Continuous Learning: Why Ongoing</h3>
+                    <div class="blog-categories">Learning & Development</div>
+                    <div class="blog-date">December 22, 2023</div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+<div class="contact-banner">
+    <div class="contact-content">
+        <span class="contact-label">Get in Touch with Us Today!</span>
+        <h2 class="contact-heading">Our Team is Here for You. Let's Make Your Experience Exceptional!</h2>
+        <a asp-controller="Home" asp-action="Contact" class="contact-button">Contact Us →</a>
+
+    </div>
+    <div class="contact-image">
+        <img src="./images/13569.jpg" alt="Team Collaboration">
+    </div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="Company Logo" />
+                </div>
+
+                <h3>CONTACT US</h3>
+                <div class="footer-contact">
+                    <p>📞 +91-999999999</p>
+                    <p>✉️ sales@AnalyticsDemo</p>
+                    <p>📍  Noida</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="about.html" asp-area="" asp-controller="Home" asp-action="Privacy">About Us</a></li>
+                    <li><a href="about.html"asp-area="" asp-controller="Home" asp-action="Contact">Work At AnalyticsDemo</a></li>
+                    <li><a href="about.html" asp-area="" asp-controller="Home" asp-action="Career">Current Openings</a></li>
+                    <li><a href="about.html" asp-area="" asp-controller="Home" asp-action="Resources">Blogs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>SERVICES</h3>
+                <ul>
+                    <li><a href="BusinessAutomation.html" asp-area="" asp-controller="Home" asp-action="BusinessAutomation">Business Automation</a></li>
+                    <li><a href="DataAI.html" asp-area="" asp-controller="Home" asp-action="DataAI">Data & AI</a></li>
+                    <li><a href="CloudImplementation.html" asp-area="" asp-controller="Home" asp-action="CloudImplementation">Cloud Implementation</a></li>
+                    <li><a href="DataAnalytics.html" asp-area="" asp-controller="Home" asp-action="DataAnalytics">DataAnalytics</a></li>
+                    <li><a href="MaintenanceSupport.html" asp-area="" asp-controller="Home" asp-action="MaintenanceSupport">Maintenance & Support</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-section">
+                <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                <div class="footer-contact">
+                    <p>To subscribe to our newsletter, please email us:</p>
+                    <p><a href="mailto:sales@analytics.com" style="color: white; text-decoration: underline;">sales@analytics.com</a></p>
+                </div>
+                <div class="follow-section">
+                    <h4>FOLLOW</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 AnalyticsDEMO
+        </div>
+    </div>
+</footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
